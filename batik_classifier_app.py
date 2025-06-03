@@ -13,16 +13,15 @@ def load_model():
 
 model = load_model()
 
-# Ambil class names dari folder dalam direktori dataset
-def get_class_names():
-    dataset_dir = "Dataset/Dataset_Nusantara_7"  # Ganti sesuai path dataset kamu
-    class_folders = sorted([
-        folder for folder in os.listdir(dataset_dir)
-        if os.path.isdir(os.path.join(dataset_dir, folder))
-    ])
-    return class_folders
-
-class_names = get_class_names()
+class_names = [
+    "JawaBarat_Megamendung",
+    "Kalimantan_CorakInsang",
+    "Kalimantan_Dayak",
+    "Papua_Cendrawasih",
+    "Solo_Parang",
+    "Tiongkok_IkatCelup",
+    "Yogyakarta_Kawung"
+]
 
 # UI Streamlit
 st.set_page_config(page_title="Klasifikasi Batik", layout="centered")
